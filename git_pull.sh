@@ -1,11 +1,12 @@
 #!/bin/sh
-#
-# author: yanue
-# time: 2015-11-28
 # git pull tool
 # when project has untracked and local change files
 # usage:
 #  gpl [project path]
+#
+# author: yanue
+# email: yanue@outlook.com
+# time: 2015-11-28
 
 tmp_file='/tmp/git_pull_error';
 git='/usr/local/bin/git';
