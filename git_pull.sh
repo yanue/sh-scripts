@@ -1,14 +1,22 @@
 #!/bin/sh
+#
+# author: yanue
+# time: 2015-11-28
 # git pull tool
 # when project has untracked and local change files
+#
 # usage:
 #  gpl [project path]
+#
+# update:
+# -- echo delete files
 #
 # author: yanue
 # email: yanue@outlook.com
 # time: 2015-11-28
+# update: 2016-01-07
 
-tmp_file='/tmp/git_pull_error';
+tmp_file='/tmp/git_pull_tmp';
 git='/usr/local/bin/git';
 
 if [ $# -gt 0 ] ;then
@@ -33,16 +41,18 @@ $git pull 2> $tmp_file;
 # if has errors
 if [ $? != 0 ]; then
         # delete untracked and local change files
-        # --all those files each have an epmty space char
+        ## all those files each have an epmty space char
+        echo 'need delete files:';
+        cat $tmp_file | sed -n '/^\s/p' | awk '{print " "$1}'
         cat $tmp_file | sed -n '/^\s/p' | awk '{print $1}' | xargs rm -f
-        # git pull again
+        # pull again
         $git pull;
         # set tmp file to empty
         cat /dev/null > $tmp_file;
 fi
 
 # addon options
-chmod -R 777 data cache uploads avatar
+chmod -R 777 .
 chown -R www.www .
 
 # end
