@@ -5,8 +5,8 @@
 PATH=/usr/local/bin:/sbin:/usr/bin:/bin
 
 REDIS_PORT=6379 #实际环境而定
-REDIS_SERVER=/usr/local/bin/redis-server  #实际环境而定
-REDIS_CLI=/usr/local/bin/redis-cli #实际环境而定
+REDIS_SERVER=$PATH/redis-server  #实际环境而定
+REDIS_CLI=$PATH/redis-cli #实际环境而定
 
 PID_FILE=/var/run/redis.pid
 CONF="/etc/redis.conf" #实际环境而定
