@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v2ray useful</title>
+    <style>
+        pre {
+            color: #ff8106;
+        }
+
+        code {
+            color: #4c6fff;
+        }
+    </style>
+</head>
+<body>
+<h1> v2ray 客户端使用说明 </h1>
+<h2>config file</h2>
+<pre>
+    <a target="_blank" href="https://ssl.yanue.net/ray/config.json">https://ssl.yanue.net/ray/config.json</a>
+
+    配置文件也可以从 <a target="_blank" href="https://free-ss.site/">https://free-ss.site/</a> 下载：
+</pre>
+
+
+<h2>for windows</h2>
+<pre>
+    // 下载 v2rayN
+    <code><a target="_blank"
+             href="https://github.com/2dust/v2rayN/releases">https://github.com/2dust/v2rayN/releases</a></code>
+
+    // config另存为
+    <code>https://ssl.yanue.net/ray/config.json</code>
+
+    // 启动v2rayN.exe, 导入config.json,启动http代理
+    // 具体操作可以参考v2rayN相关教程
+</pre>
+
+<h2>for linux:</h2>
+<pre>
+    // install v2ray
+    <code>bash <(curl -L -s https://install.direct/go.sh)</code>
+
+    // get config
+    <code>wget https://ssl.yanue.net/ray/config.json -O /etc/v2ray/config.json</code>
+
+    // start
+    <code>service v2ray start</code>
+</pre>
+<h2>for mac:</h2>
+<pre>
+    // Install v2ray-core
+    <code>brew tap v2ray/v2ray</code>
+    <code>brew install v2ray-core</code>
+
+    // get config
+    <code>wget https://ssl.yanue.net/ray/config.json -O /usr/local/etc/config.json</code>
+
+    // start
+    <code>v2ray -config /usr/local/etc/config.json</code>
+</pre>
+
+</body>
+</html>
